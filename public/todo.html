@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix</title>
+  <!-- Include Vue.js from a CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3.2.30"></script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #333; /* Change background color to black */
+      color: white; /* Change text color to white */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    #app {
+      background-color: rgb(65, 4, 41);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color:white;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color:white;
+      font-size: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+      font-size: 16px;
+      color: #333;
+      background-color: #f0f0f0;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Netflix</h1> <!-- Added the heading "Indian Kitchen" -->
+
+    <!-- Standard Graphics -->
+    <div>
+      <h2>Standard Graphics</h2>
+      <p v-if="showParagraph">Using v-if, this sentence is shown.</p>
+      <p v-else>Using v-else, the following sentence is shown.</p>
+
+      <p v-show="showParagraph">V-show is being used to display this passage.</p>
+
+      <ul>
+        <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+      </ul>
+
+      <div v-for="item in itemsWithCondition" :key="item.id">
+        <p v-if="item.isVisible">{{ item.name }} is visible.</p>
+      </div>
+    </div>
+
+    <!-- Form Input Handling -->
+    <div>
+      <h2>Variant Input Management</h2>
+      <input type="text" v-model="message" placeholder="Type something...">
+      <p>You typed: {{ message }}</p>
+      <button @click="clearMessage">Clear</button>
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          showParagraph: true,
+          items: [
+            { id: 1, name: 'The Vampire Diaries' },
+            { id: 2, name: 'The Originals' },
+            { id: 3, name: 'Young Sheldon' },
+          ],
+          itemsWithCondition: [
+            { id: 1, name: 'Item A', isVisible: true },
+            { id: 2, name: 'Item B', isVisible: false },
+            { id: 3, name: 'Item C', isVisible: true },
+          ],
+          message: '',
+        };
+      },
+      methods: {
+        clearMessage() {
+          this.message = '';
+        },
+      },
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
+
