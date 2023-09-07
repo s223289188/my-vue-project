@@ -54,12 +54,12 @@ export default {
 
 <style>
 :root {
-  --primary-color:purple; /* Purple */
+  --primary-color: purple; /* Purple */
   --secondary-color: #d400aa; /* Pink */
 }
 
 .app-title {
-  font-size: 28px;
+  font-size: 20px;
   color: white;
   text-align: center;
   margin-top: 20px;
@@ -71,21 +71,28 @@ export default {
   margin: 0 auto;
   display: block;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #692051;
   border-radius: 5px;
   font-size: 16px;
+}
+
+body {
+  background-color:black; 
+  margin: 0;
+  padding: 0;
 }
 
 #app {
   font-family: 'Arial', sans-serif;
   font-size: 20px;
   text-align: center;
-  margin-top: 18px;
+  margin: 20px auto; 
+  max-width: 400px; 
   background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-  color:brown;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+  color:grey; 
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
 }
 .input-container {
   margin-bottom: 18px;
@@ -109,7 +116,7 @@ export default {
 }
 
 .todo-item:hover {
-  background-color: black (255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .todo-checkbox {
