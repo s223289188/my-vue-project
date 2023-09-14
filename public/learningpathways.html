@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Digital Craft Hub</title>
+  <style>
+   
+    body, h1, h2, h3, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://wallpaperaccess.com/full/3239480.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    
+    .hero {
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: #ff5722;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #f44336;
+    }
+
+    
+    .learning-pathways {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .pathway-card {
+      background-color: rgba(255, 255, 255, 0.093);
+      border: 1px solid black;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .pathway-card:hover {
+      transform: scale(1.05);
+    }
+
+    .pathway-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .pathway-card p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .pathway-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .pathway-link:hover {
+      background-color: #0056b3;
+    }
+
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .cta-button {
+        padding: 12px 24px;
+      }
+
+      .pathway-card {
+        width: 100%;
+      }
+
+      .pathway-card h3 {
+        font-size: 1.5rem;
+      }
+
+      .pathway-card p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Welcome to My Digital Craft Hub</h1>
+    <p>Your learning and achievement adventure begins here.</p>
+    <a href="#" class="cta-button">Let's begin</a>
+  </div>
+  <h2 class="choose-pathway">Choose Your Learning Pathway</h2>
+  <div class="learning-pathways">
+    <div class="pathway-card" onclick="toggleDetails(0)">
+      <h3>UI/UX Development</h3>
+      <p>Discover the art of designing user experiences.</p>
+      <a href="#" class="pathway-link">Explore</a>
+      <div class="pathway-details" id="details-0">
+        <h4>Details</h4>
+        <p>UI/UX development involves creating user-friendly interfaces and optimizing user experiences.</p>
+      </div>
+    </div>
+    <div class="pathway-card" onclick="toggleDetails(1)">
+      <h3>Back-End Programming</h3>
+      <p>Unlock the world of server-side development.</p>
+      <a href="#" class="pathway-link">Explore</a>
+      <div class="pathway-details" id="details-1">
+        <h4>Details</h4>
+        <p>Back-end programming deals with server-side logic, databases, and server management.</p>
+      </div>
+    </div>
+    <div class="pathway-card" onclick="toggleDetails(2)">
+      <h3>Integrated Development</h3>
+      <p>Bridge the gap between front-end and back-end.</p>
+      <a href="#" class="pathway-link">Explore</a>
+      <div class="pathway-details" id="details-2">
+        <h4>Details</h4>
+        <p>Integrated development involves combining front-end and back-end technologies for a seamless user experience.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script>
+    function toggleDetails(index) {
+      var detailsElement = document.getElementById('details-' + index);
+      if (detailsElement.style.display === 'block') {
+        detailsElement.style.display = 'none';
+      } else {
+        detailsElement.style.display = 'block';
+      }
+    }
+  </script>
+
+  <script src="http://localhost:8080/js/app.js"></script>
+</body>
+</html>
+
+
+
+
+
+

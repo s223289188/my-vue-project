@@ -1,15 +1,16 @@
 <template>
   <div id="app">
-    <TodoApp />
+    <LearningPathways /> 
   </div>
 </template>
 
 <script>
-import TodoApp from './components/todo-app.vue';
+import LearningPathways from './components/learning-pathways.vue'; 
 
 export default {
   components: {
-    TodoApp,
- },
+    LearningPathways 
+  }
 };
 </script>
+
