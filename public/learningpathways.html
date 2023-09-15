@@ -128,7 +128,32 @@
       .pathway-card p {
         font-size: 1rem;
       }
+     /* Form styles */
+     .signup-form {
+      margin-top: 20px;
     }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+  }
   </style>
 </head>
 <body>
@@ -165,6 +190,14 @@
         <h4>Details</h4>
         <p>Integrated development involves combining front-end and back-end technologies for a seamless user experience.</p>
       </div>
+    </div>
+    <div class="signup-form">
+      <h2>Sign Up for Updates</h2>
+      <form action="#" method="post">
+        <input type="text" class="form-input" placeholder="Your Name" name="name" required>
+        <input type="email" class="form-input" placeholder="Your Email" name="email" required>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
     </div>
   </div>
 
